@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB Nails Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo AB Nails Designer">
+        </div>
+        <nav class="navbar">
+            <a href="#services">Serviços</a>
+            <a href="#prices">Preços</a>
+            <a href="#schedule">Agendamento</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção de Serviços -->
+    <section id="services" class="section">
+        <h2>Serviços</h2>
+        <p>Confira nossos serviços especializados em design de unhas:</p>
+        <ul>
+            <li>Manicure básica</li>
+            <li>Alongamento de unhas</li>
+            <li>Design artístico</li>
+            <li>Manicure gel</li>
+        </ul>
+    </section>
+
+    <!-- Seção de Preços -->
+    <section id="prices" class="section">
+        <h2>Preços</h2>
+        <p>Nossos preços variam de acordo com o tipo de serviço:</p>
+        <ul>
+            <li>Manicure básica - R$ 30</li>
+            <li>Alongamento de unhas - R$ 80</li>
+            <li>Design artístico - R$ 100</li>
+            <li>Manicure gel - R$ 70</li>
+        </ul>
+    </section>
+
+    <!-- Seção de Agendamento -->
+    <section id="schedule" class="section">
+        <h2>Agendamento</h2>
+        <p>Escolha uma data e horário para o seu atendimento:</p>
+        <input type="date" id="appointment-date">
+        <input type="time" id="appointment-time">
+        <button onclick="scheduleAppointment()">Agendar</button>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact" class="section">
+        <h2>Contato</h2>
+        <div class="social-links">
+            <a href="https://instagram.com/thur_besantti" target="_blank">Instagram</a>
+            <a href="https://wa.me/5511934596320" target="_blank">WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 AB Nails Designer. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.header {
+    background-color: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.navbar a:hover {
+    color: #ccc;
+}
+
+.section {
+    padding: 40px;
+    border-top: 1px solid #333;
+    background: url('marble-background.jpg') center/cover no-repeat;
+}
+
+.section h2 {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.section p, .section ul, .section li {
+    color: #ddd;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ccc;
+}
+
+function scheduleAppointment() {
+    const date = document.getElementById('appointment-date').value;
+    const time = document.getElementById('appointment-time').value;
+    
+    if (date && time) {
+        alert(`Seu agendamento foi feito para ${date} às ${time}.`);
+    } else {
+        alert('Por favor, selecione uma data e horário.');
+    }
+}
